@@ -1,0 +1,29 @@
+<div class="container">
+  <app-header></app-header>
+  <main>
+    <div class="teams-container">
+      <h1>ÉQUIPES DÉTAILS</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Trouvez votre équipe préférée ici" [(ngModel)]="searchTeam" />
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      <div class="teams-list">
+        <div class="team-card" *ngFor="let team of filteredTeams()">
+          <div class="team-card-content">
+            <h2>{{ team.full_name }}</h2>
+            <p class="division"><strong>Division :</strong> {{ team.division }}</p>
+            <p class="abbreviation"><strong>Abbréviation :</strong> {{ team.abbreviation }}</p>
+            <p class="conference"><strong>Conférence :</strong> {{ team.conference }}</p>
+            <p class="ville"><strong>Ville :</strong> {{ team.city }}</p>
+          </div>
+          <div class="team-card-footer">
+            Basketball Stats
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,79 @@
+<div class="container">
+  <app-header></app-header>
+  <main>
+    <div class="players-container">
+      <h1>Liste de tous les Joueurs</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher par nom ou équipe" [(ngModel)]="searchTerm" />
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>ID JOUEUR</th>
+              <th>PRÉNOM</th>
+              <th>NOM</th>
+              <th>POSITION</th>
+              <th>TAILLE</th>
+              <th>POIDS</th>
+              <th>NUMÉRO MAILLOT</th>
+              <th>ÉQUIPE</th>
+              <th>MINUTES JOUÉES</th>
+              <th>FGM</th>
+              <th>FGA</th>
+              <th>FG%</th>
+              <th>3PM</th>
+              <th>3PA</th>
+              <th>3P%</th>
+              <th>FTM</th>
+              <th>FTA</th>
+              <th>FT%</th>
+              <th>OREB</th>
+              <th>DREB</th>
+              <th>REB</th>
+              <th>AST</th>
+              <th>PF</th>
+              <th>PTS</th>
+              <th>DATE DU L'ANNÉE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let joueur of joueurs | filter: searchTerm">
+              <td><input type="checkbox" [(ngModel)]="joueur.favoris" (change)="toggleFavorite(joueur)"></td>
+              <td>{{ joueur.id }}</td>
+              <td>{{ joueur.prenom }}</td>
+              <td>{{ joueur.nom }}</td>
+              <td>{{ joueur.position }}</td>
+              <td>{{ joueur.taille }}</td>
+              <td>{{ joueur.poids }}</td>
+              <td>{{ joueur.numeroMaillot }}</td>
+              <td>{{ joueur.equipe }}</td>
+              <td>{{ joueur.minutesJouees }}</td>
+              <td>{{ joueur.fgm }}</td>
+              <td>{{ joueur.fga }}</td>
+              <td>{{ joueur.fgp }}</td>
+              <td>{{ joueur.tpm }}</td>
+              <td>{{ joueur.tpa }}</td>
+              <td>{{ joueur.tpp }}</td>
+              <td>{{ joueur.ftm }}</td>
+              <td>{{ joueur.fta }}</td>
+              <td>{{ joueur.ftp }}</td>
+              <td>{{ joueur.oreb }}</td>
+              <td>{{ joueur.dreb }}</td>
+              <td>{{ joueur.reb }}</td>
+              <td>{{ joueur.ast }}</td>
+              <td>{{ joueur.pf }}</td>
+              <td>{{ joueur.pts }}</td>
+              <td>{{ joueur.dateDuLannee }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

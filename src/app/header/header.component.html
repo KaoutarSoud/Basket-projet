@@ -1,0 +1,23 @@
+<div class="header-top">
+  <div class="contact-info">
+    <span class="phone">📞 +33 7 45 54 18 34</span>
+    <span class="email">✉️ SoudKaoutar&#64;gmail.com</span>
+  </div>
+</div>
+<div class="header-bottom">
+  <img src="assets/logo.png" alt="Logo" class="logo">
+  <nav>
+    <ul>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/">Accueil</a></li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/joueurs">Joueurs</a></li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/equipes">Équipes</a></li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/favoris">Favoris</a></li>
+      <li *ngIf="!(isLoggedIn$ | async)" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/connection">Connexion</a>
+      </li>
+      <li *ngIf="isLoggedIn$ | async">
+        <a href="#" (click)="onLogout()">Déconnexion</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.form-section {
+  width: 48%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, p {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem; /* Reduce spacing below h1 */
+}
+
+p {
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 0.7rem; /* Reduce spacing below p */
+}
+
+
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 2px;
+  background-color: #ddd;
+  left: 50%;
+  transform: translateX(-50%);
+}

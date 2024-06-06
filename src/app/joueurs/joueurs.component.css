@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .players-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    position: relative;
+  }
+  
+  h1::before,
+  h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background: black;
+  }
+  
+  h1::before {
+    left: 0;
+  }
+  
+  h1::after {
+    right: 0;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 80%; /* Ensure the search bar is less wide than the table */
+    margin: 0 auto;
+  }
+  
+  .search-bar input {
+    width: 70%; /* Reduced width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar button mat-icon {
+    color: white;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 1500px; /* Adjust this value based on the minimum width you need */
+    background-color: #f9eae1;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid #e7b89d;
+    text-align: left;
+    color: black; /* Set text color to black */
+  }
+  
+  th {
+    background-color: #f4d4c2;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #f9eae1;
+  }
+  
+  input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  td input[type="checkbox"] {
+    display: block;
+    margin: auto;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: #f7d6cc;
+  }
+  

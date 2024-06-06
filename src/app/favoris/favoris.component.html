@@ -1,0 +1,23 @@
+<div class="container">
+  <app-header></app-header>
+  <main>
+    <div class="favorites-container">
+      <div class="favorites">
+        <div class="favorite-item" *ngFor="let player of players">
+          <div class="favorite-item-content">
+            <div class="player-info">
+              <h3>{{player.prenom}} {{player.nom}}</h3>
+              <p>{{player.equipe}}</p>
+              <p>{{player.poids}} lbs</p>
+            </div>
+            <div class="favorite-checkbox">
+              <input type="checkbox" [(ngModel)]="player.favoris" id="favorite-{{player.id}}" (change)="saveFavorites()">
+              <label for="favorite-{{player.id}}">Favori</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>

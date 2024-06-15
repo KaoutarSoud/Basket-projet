@@ -1,0 +1,70 @@
+.players {
+  position: relative;
+  padding: 20px;
+  background: url('/assets/pas sure.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.players h2 {
+  color: orange; /* Change title color */
+  font-size: 36px; /* Adjust font size */
+  margin-bottom: 20px; /* Add margin below title */
+}
+
+.player-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.player-card {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+  border-radius: 10px;
+  padding: 20px; /* Add more padding */
+  margin: 10px;
+  width: 250px; /* Adjust width */
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.player-card img {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  border-radius: 50%;
+  margin-bottom: 10px; /* Add margin below image */
+}
+
+.player-card h3 {
+  color: orange; /* Change name color */
+  margin-bottom: 10px; /* Add margin below name */
+}
+
+.player-card a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold; /* Make link bold */
+}
+
+.player-card a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.view-all {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 16px; /* Adjust font size */
+  transition: background-color 0.3s; /* Add transition */
+}
+
+.view-all:hover {
+  background-color: darkorange; /* Change color on hover */
+}

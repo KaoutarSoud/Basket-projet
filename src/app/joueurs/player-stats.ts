@@ -25,4 +25,5 @@ export interface PlayerStats {
   pts: number;
   dateDuLannee: string;
   favoris: boolean;
+  photoUrl: string;
 }

@@ -30,6 +30,13 @@ import { FilterPipe } from './joueurs/filter.pipe';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
 import { AuthInterceptor } from './auth.interceptor';
+import { BannerComponent } from './accueil/banner/banner.component';
+import { AboutComponent } from './accueil/about/about.component';
+import { AccueilComponent } from './accueil/accueil/accueil.component';
+import { PlayersComponent } from './accueil/players/players.component';
+import { TeamsComponent } from './accueil/teams/teams.component';
+import { SearchBarComponent } from './accueil/search-bar/search-bar.component';
+import { NewsComponent } from './accueil/news/news.component';
 
 
 
@@ -46,7 +53,14 @@ import { AuthInterceptor } from './auth.interceptor';
     FavorisComponent,
     EquipesComponent,
     JoueursComponent,
-    FilterPipe
+    FilterPipe,
+    BannerComponent,
+    AboutComponent,
+    AccueilComponent,
+    PlayersComponent,
+    TeamsComponent,
+    SearchBarComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -68,8 +82,7 @@ import { AuthInterceptor } from './auth.interceptor';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideAnimationsAsync(),
-    provideFirebaseApp(() => initializeApp({"projectId":"basketballstats-8a5d8","appId":"1:347762277353:web:b47d0f879fddb0481fa978","storageBucket":"basketballstats-8a5d8.appspot.com","apiKey":"AIzaSyDxcN7cQtErlbuDdtBoO4mWq47G8o9Y1cU","authDomain":"basketballstats-8a5d8.firebaseapp.com","messagingSenderId":"347762277353"}))
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

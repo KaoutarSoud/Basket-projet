@@ -22,6 +22,9 @@ export class JoueursComponent implements OnInit {
 
   toggleFavorite(player: PlayerStats): void {
     player.favoris = !player.favoris;
+    if (player.favoris) {
+      player.photoUrl = this.getPhotoUrl(player);
+    }
     this.saveFavorites();
   }
 
@@ -35,9 +38,19 @@ export class JoueursComponent implements OnInit {
     const favoritePlayers = JSON.parse(localStorage.getItem('favoritePlayers') || '[]');
     console.log('Loaded favorites:', favoritePlayers); // Debug log
     this.joueurs.forEach(player => {
-      if (favoritePlayers.find((fav: PlayerStats) => fav.id === player.id)) {
+      const fav = favoritePlayers.find((fav: PlayerStats) => fav.id === player.id);
+      if (fav) {
         player.favoris = true;
+        player.photoUrl = fav.photoUrl || this.getPhotoUrl(player);
       }
     });
   }
+
+  getPhotoUrl(player: PlayerStats): string {
+    const fullName = `${player.prenom} ${player.nom}`;
+    const photoUrl = `assets/players/${fullName}.png`;
+    console.log(`Generated photo URL for ${fullName}: ${photoUrl}`); // Debug log
+    return photoUrl;
+  }
+  
 }

@@ -12,11 +12,14 @@
       <div class="teams-list">
         <div class="team-card" *ngFor="let team of filteredTeams()">
           <div class="team-card-content">
-            <h2>{{ team.full_name }}</h2>
-            <p class="division"><strong>Division :</strong> {{ team.division }}</p>
-            <p class="abbreviation"><strong>Abbréviation :</strong> {{ team.abbreviation }}</p>
-            <p class="conference"><strong>Conférence :</strong> {{ team.conference }}</p>
-            <p class="ville"><strong>Ville :</strong> {{ team.city }}</p>
+            <div class="team-details">
+              <h2>{{ team.full_name }}</h2>
+              <p class="division"><strong>Division :</strong> {{ team.division }}</p>
+              <p class="abbreviation"><strong>Abbréviation :</strong> {{ team.abbreviation }}</p>
+              <p class="conference"><strong>Conférence :</strong> {{ team.conference }}</p>
+              <p class="ville"><strong>Ville :</strong> {{ team.city }}</p>
+            </div>
+            <img *ngIf="getLogoPath(team)" [src]="getLogoPath(team)" alt="{{ team.full_name }} Logo" class="team-logo">
           </div>
           <div class="team-card-footer">
             Basketball Stats

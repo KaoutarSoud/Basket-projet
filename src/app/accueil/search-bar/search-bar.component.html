@@ -1,0 +1,13 @@
+<div class="search-bar-wrapper">
+  <div class="search-bar-container">
+    <div class="search-bar">
+      <select [(ngModel)]="selectedOption">
+        <option value="joueurs">Joueur</option>
+        <option value="equipes">Équipe</option>
+      </select>
+      <button (click)="navigate()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

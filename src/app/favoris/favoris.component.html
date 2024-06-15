@@ -5,6 +5,7 @@
       <div class="favorites">
         <div class="favorite-item" *ngFor="let player of players">
           <div class="favorite-item-content">
+            <img [src]="getPhotoPath(player)" alt="{{player.prenom}} {{player.nom}}" class="player-image" (error)="logImageError(player)">
             <div class="player-info">
               <h3>{{player.prenom}} {{player.nom}}</h3>
               <p>{{player.equipe}}</p>

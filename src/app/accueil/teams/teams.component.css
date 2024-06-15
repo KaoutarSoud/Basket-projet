@@ -1,0 +1,56 @@
+.teams {
+  position: relative;
+  padding: 150px 100px;
+  background: url('/assets/topequipe.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teams h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+.team-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px; /* Increase font size */
+  color: rgba(0, 0, 0, 0.1);
+  line-height: 1; /* Ensure numbers don't overlap */
+}
+
+.team-card h3 {
+  color: black;
+  font-weight: bold; /* Make team names bold */
+  margin-top: 70px; /* Add margin to avoid overlap with number */
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  color: black;
+}

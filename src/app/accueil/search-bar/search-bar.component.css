@@ -1,0 +1,47 @@
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  top: -40px; /* Adjust to overlap the banner */
+  z-index: 1;
+}
+
+.search-bar-container {
+  background-color: orange;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content; /* Make the container fit the content */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 500px; /* Adjust the width as needed */
+}
+
+.search-bar select {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  flex: 1; /* Allow the select to take up available space */
+}
+
+.search-bar button {
+  padding: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 50px; /* Fixed width for the button */
+}
+
+.search-bar button mat-icon {
+  vertical-align: middle;
+}

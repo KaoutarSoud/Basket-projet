@@ -32,17 +32,15 @@ main {
 }
 
 .favorite-item-content {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
 }
 
 .player-image {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 90px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 20px; /* Ensure the image is on the left side */
 }
 
 .player-info {
@@ -55,5 +53,5 @@ main {
 }
 
 .favorite-checkbox input {
-  margin-right: 10px;
+  margin-left: 10px;
 }

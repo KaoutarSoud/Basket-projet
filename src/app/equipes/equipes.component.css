@@ -84,20 +84,26 @@ h1::after {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; /* Ensure uniform height */
 }
 
 .team-card-content {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between team details and logo */
+}
+
+.team-details {
+  flex: 1; /* Ensure details take the remaining space */
 }
 
 .team-card-footer {
-  position: absolute;
-  bottom: 10px;
-  left: 600px; /* Move Basketball Stats slightly to the left */
-  z-index: 2;
   color: #FF6600;
   font-weight: bold;
+  text-align: right; /* Align footer text to the right */
 }
 
 .team-card::before {
@@ -154,4 +160,9 @@ h1::after {
 
 .team-card .ville {
   margin-top: 10px;
+}
+
+.team-logo {
+  width: 100px; /* Uniform logo size */
+  height: auto;
 }

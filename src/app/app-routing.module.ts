@@ -8,6 +8,7 @@ import { FavorisComponent } from './favoris/favoris.component';
 import { AuthGuard } from '../app/guards/auth.guard';
 import { EquipesComponent } from './equipes/equipes.component';
 import { JoueursComponent } from './joueurs/joueurs.component';
+import { AccueilComponent } from './accueil/accueil/accueil.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'connection', pathMatch: 'full' },
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'favoris', component: FavorisComponent, canActivate: [AuthGuard.canActivate] },
   { path: 'equipes', component: EquipesComponent },
   { path: 'joueurs', component: JoueursComponent },
+  { path: 'accueil', component: AccueilComponent },
+
 ];
 
 @NgModule({

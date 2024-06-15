@@ -1,0 +1,47 @@
+.about {
+  padding: 20px 20px; /* Reduce padding */
+  background-color: white;
+  color: black; /* Text color */
+  margin: 0 50px; /* Add margin to both sides */
+}
+
+.about h2 {
+  text-align: center;
+  color: orange; /* Title color */
+  font-size: 36px;
+  margin-top: 0; /* Remove top margin */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+  padding-left: 20px; /* Add space to the left */
+}
+
+.about-text h3 {
+  color: black; /* Subtitle color */
+  font-weight: bold; /* Make the subtitle bold */
+}
+
+.about-text p {
+  color: black; /* Paragraph text color */
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid orange; /* Add border to the image */
+}

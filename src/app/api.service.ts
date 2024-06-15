@@ -30,6 +30,8 @@ export class ApiService {
   }
 
   private transformPlayerStats(data: any): PlayerStats {
+    const photoUrl = this.getPhotoUrl(data.player.first_name, data.player.last_name);
+    console.log(`Generated photo URL for ${data.player.first_name} ${data.player.last_name}: ${photoUrl}`); // Debug log
     return {
       id: data.player.id,
       prenom: data.player.first_name,
@@ -56,7 +58,8 @@ export class ApiService {
       pf: data.pf,
       pts: data.pts,
       dateDuLannee: new Date(data.game.date).getFullYear().toString(),
-      favoris: false
+      favoris: false,
+      photoUrl: photoUrl // Add photoUrl
     };
   }
 
@@ -79,5 +82,9 @@ export class ApiService {
       'C': 'Pivot'
     };
     return positions[position] || position;
+  }
+
+  private getPhotoUrl(firstName: string, lastName: string): string {
+    return `assets/players/${firstName} ${lastName}.png`; // Adjust based on your directory structure
   }
 }

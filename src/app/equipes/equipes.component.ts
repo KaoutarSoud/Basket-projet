@@ -28,4 +28,17 @@ export class EquipesComponent implements OnInit {
       team.name.toLowerCase().includes(this.searchTeam.toLowerCase())
     );
   }
+
+  getLogoPath(team: Team): string | null {
+    const baseName = team.full_name; // Garder les espaces et les majuscules
+    const extensions = ['png'];
+  
+    for (const ext of extensions) {
+      const logoPath = `assets/equipes/${baseName}.${ext}`;
+      // Assuming the file exists
+      return logoPath;
+    }
+    return null;
+  }
+  
 }

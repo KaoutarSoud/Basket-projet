@@ -40,7 +40,7 @@ import { NewsComponent } from './accueil/news/news.component';
 
 
 
-
+//Déclarations : Liste des composants, directives, et pipes utilisés.
 
 @NgModule({
   declarations: [
@@ -62,6 +62,7 @@ import { NewsComponent } from './accueil/news/news.component';
     SearchBarComponent,
     NewsComponent
   ],
+  //Imports : Importation des modules nécessaires
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -75,6 +76,7 @@ import { NewsComponent } from './accueil/news/news.component';
     HttpClientModule,        
     ReactiveFormsModule,      
   ],
+  //Providers : Services et intercepteurs, y compris la configuration de Firebase
   providers: [
     AuthGuard,
     ApiService,
@@ -84,6 +86,7 @@ import { NewsComponent } from './accueil/news/news.component';
     provideFirestore(() => getFirestore()),
     provideAnimationsAsync()
   ],
+  //Bootstrap : Démarrage de l'application avec le composant racine AppComponent.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

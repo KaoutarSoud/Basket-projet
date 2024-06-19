@@ -16,8 +16,10 @@ export class ApiService {
   private baseUrl = 'https://api.balldontlie.io/v1';
 
   constructor(private http: HttpClient) { }
-
+  
+//Récupère les statistiques des joueurs pour une saison donné
   getPlayerStats(season: number): Observable<PlayerStats[]> {
+    //Utilise pipe et map pour transformer la réponse en un tableau de PlayerStats
     return this.http.get<ApiResponse<any>>(`${this.baseUrl}/stats?seasons[]=${season}`).pipe(
       map(response => response.data.map(item => this.transformPlayerStats(item)))
     );
@@ -30,6 +32,7 @@ export class ApiService {
   }
 
   private transformPlayerStats(data: any): PlayerStats {
+    // Transformation des données brutes en un format PlayerStats
     const photoUrl = this.getPhotoUrl(data.player.first_name, data.player.last_name);
     console.log(`Generated photo URL for ${data.player.first_name} ${data.player.last_name}: ${photoUrl}`); // Debug log
     return {
@@ -64,6 +67,7 @@ export class ApiService {
   }
 
   private transformTeam(data: any): Team {
+    // Transformation des données brutes en un format Team
     return {
       id: data.id,
       conference: data.conference === 'West' ? 'Ouest' : 'Est',
@@ -85,6 +89,6 @@ export class ApiService {
   }
 
   private getPhotoUrl(firstName: string, lastName: string): string {
-    return `assets/players/${firstName} ${lastName}.png`; // Adjust based on your directory structure
+    return `assets/players/${firstName} ${lastName}.png`; 
   }
 }

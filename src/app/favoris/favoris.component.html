@@ -12,7 +12,7 @@
               <p>{{player.poids}} lbs</p>
             </div>
             <div class="favorite-checkbox">
-              <input type="checkbox" [(ngModel)]="player.favoris" id="favorite-{{player.id}}" (change)="saveFavorites()">
+              <input type="checkbox" [(ngModel)]="player.favoris" id="favorite-{{player.id}}" (change)="toggleFavorite(player)">
               <label for="favorite-{{player.id}}">Favori</label>
             </div>
           </div>

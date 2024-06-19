@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  //surveille l'état de connexion de l'utilisateur
   isLoggedIn$: Observable<boolean>;
 
   constructor(public authService: AuthService) {

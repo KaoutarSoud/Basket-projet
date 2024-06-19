@@ -43,4 +43,13 @@ export class FavorisComponent implements OnInit {
   logImageError(player: PlayerStats): void {
     console.error(`Failed to load image for ${player.prenom} ${player.nom}`);
   }
+
+  // New method to remove a player from favorites
+  toggleFavorite(player: PlayerStats): void {
+    const index = this.players.findIndex(p => p.id === player.id);
+    if (index !== -1) {
+      this.players.splice(index, 1);
+      this.saveFavorites();
+    }
+  }
 }

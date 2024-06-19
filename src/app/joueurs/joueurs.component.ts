@@ -16,7 +16,7 @@ export class JoueursComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getPlayerStats(2023).subscribe((data: PlayerStats[]) => {
       this.joueurs = data;
-      this.loadFavorites();
+      this.loadFavorites();// Chargement des favoris au démarrage
     });
   }
 
@@ -35,6 +35,7 @@ export class JoueursComponent implements OnInit {
   }
 
   loadFavorites(): void {
+    // Chargement des favoris du localStorage
     const favoritePlayers = JSON.parse(localStorage.getItem('favoritePlayers') || '[]');
     console.log('Loaded favorites:', favoritePlayers); // Debug log
     this.joueurs.forEach(player => {
